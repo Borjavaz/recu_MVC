@@ -1,3 +1,51 @@
+## Avanzar:
+```mermaid
+sequenceDiagram
+    participant Model
+    participant Controller
+    participant View
+    activate View
+    View->>Controller:avanzar(int metros)
+    activate Controller
+    Controller->>View:pedirMatricula(String)
+    activate View
+    View-->>Controller:String
+    deactivate View
+    
+    
+    Controller->>Model:avanzar(int metros, String matricula)
+    activate Model
+    Model-->>Controller:Coche
+    deactivate Model
+    Controller-->>View:Coche
+    deactivate Controller
+    deactivate View
+```
+
+## Repostar:
+```mermaid
+sequenceDiagram
+    participant Model
+    participant Controller
+    participant View
+    activate View
+    View->>Controller:repostar(int litros)
+    activate Controller
+    Controller->>View:pedirMatricula(String)
+    activate View
+    View-->>Controller:String
+    deactivate View
+    
+    
+    Controller->>Model:repostar(int litros, String matricula)
+    activate Model
+    Model-->>Controller:Coche
+    deactivate Model
+    Controller-->>View:Coche
+    deactivate Controller
+    deactivate View
+```
+
 ## Cambiar velocidad:
 ```mermaid
 sequenceDiagram
